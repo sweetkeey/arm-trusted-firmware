@@ -55,6 +55,7 @@ PLAT_BL_COMMON_SOURCES	:=	drivers/arm/pl011/pl011.c			\
 				lib/aarch64/xlat_tables.c			\
 				lib/semihosting/semihosting.c			\
 				lib/semihosting/aarch64/semihosting_call.S	\
+				plat/common/plat_arm_gic.c			\
 				plat/common/aarch64/plat_common.c		\
 				plat/fvp/fvp_io_storage.c
 
@@ -88,7 +89,7 @@ BL31_SOURCES		+=	drivers/arm/tzc400/tzc400.c			\
 				plat/fvp/fvp_security.c
 endif
 
-# Flag used by the FVP port to determine the version of ARM GIC architecture
+# Flag used by the platform port to determine the version of ARM GIC architecture
 # to use for interrupt management in EL3.
-FVP_GIC_ARCH		:=	2
-$(eval $(call add_define,FVP_GIC_ARCH))
+ARM_GIC_ARCH		:=	2
+$(eval $(call add_define,ARM_GIC_ARCH))

@@ -85,10 +85,10 @@ void fvp_get_entry_point_info(unsigned long target_security,
 void fvp_cci_setup(void);
 
 /* Declarations for fvp_gic.c */
-void gic_cpuif_deactivate(unsigned int);
-void gic_cpuif_setup(unsigned int);
-void gic_pcpu_distif_setup(unsigned int);
-void gic_setup(void);
+void fvp_gic_cpuif_deactivate(unsigned int);
+void fvp_gic_cpuif_setup(unsigned int);
+void fvp_gic_pcpu_distif_setup(unsigned int);
+void fvp_gic_setup(void);
 
 /* Declarations for fvp_topology.c */
 int fvp_setup_topology(void);
